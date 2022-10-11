@@ -1,0 +1,59 @@
+.Login{
+  display: grid;
+  place-items: center;
+  height:90vh;
+  overflow-y: hidden;
+
+  form{
+
+    border:1px solid #3d364a;
+    border-radius: 1em;
+    height: 15em;
+    padding:1em;
+    display:  flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    input{
+      padding:.5em;
+      border:1px solide #5ece80;
+
+      &:hover{
+        cursor:pointer;
+      }
+    }
+
+    button{
+      padding: 1em 1.25em;
+      border-radius: .25em;
+    }
+
+    sub{
+      text-align: center;
+
+      &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  h1{
+    font-family: 'Lobster';
+    color: #5ece80;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+
+}
+
+.Signup{
+  @extend .Login;
+
+  form{
+    height: auto;
+    gap: .5em;
+  }
+
+}

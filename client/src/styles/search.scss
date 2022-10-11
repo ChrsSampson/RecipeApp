@@ -1,0 +1,39 @@
+.Search{
+
+  margin-top: 1em;
+  padding-left: 2em;
+
+  select{
+    padding:.5em;
+    margin-right: .5em;
+    border-radius: .5em;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  input{
+    padding: .5em;
+    margin-right: .5em;
+    border-radius: .5em;
+
+  }
+
+  button{
+    border:none;
+    border-radius: .25em;
+    padding:.5em 1.25em;
+
+    &:hover{
+      background-color: #5ece80;
+    }
+  }
+
+  .results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0 2em;
+  }
+}

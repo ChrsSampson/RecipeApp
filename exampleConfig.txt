@@ -1,0 +1,13 @@
+This is what the config.js file should look like
+fill in the values for your enviroment
+
+const config = {
+  port: 0000,
+  db:{
+    host: 'localhost',
+    user: 'recipe',
+    password: '0000'
+  }
+}
+
+module.exports = config;
