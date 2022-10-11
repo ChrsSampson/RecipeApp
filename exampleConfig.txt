@@ -1,12 +1,15 @@
 This is what the config.js file should look like
-fill in the values for your enviroment
+create a config.js file and fill in the values for your enviroment
 
 const config = {
-  port: 0000,
+  port: [your port],
   db:{
     host: 'localhost',
     user: 'recipe',
-    password: '0000'
+    password: '[your database password]'
+  },
+  session: {
+    secret: '[your secret]',
   }
 }
 

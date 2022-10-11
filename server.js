@@ -29,5 +29,5 @@ app.use('/login', require('./routes/login') );
 app.use('/like', require('./routes/like') );
 
 app.listen(config.port, () => {
-  console.log('server running')
+  console.log('server running on port ' + config.port);
 });
