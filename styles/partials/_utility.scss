@@ -1,0 +1,72 @@
+// utility classes - classes that are used for layout and positioning
+
+// -------Containers-------
+
+// generic container that has gutters on the sides
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+// full cover container that centers on inner child
+.container-centered{
+    @extend .container;
+    height:100vh;
+    display: grid;
+    place-items: center;
+}
+
+// input wrapper form a label and input
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    label{
+        margin-bottom: 0.5rem;
+    }
+    input{
+        padding: 0.5rem;
+        border: 1px solid $border-light;
+        border-radius: 0.25rem;
+    }
+}
+
+// -------Inputs---------
+
+// input with a label
+input[type="text"], input[type="password"], input[type="email"]{
+    @extend .input-group;
+    border: 3px solid white
+    &:active, &:focus{
+        border: 3px solid $border-accent;
+        background-color: lighten($bg_main-light, 10%);
+        color: $text_main;
+    }
+    &:hover{
+        border: 3px solid $border-accent;
+        background-color: lighten($bg_main-light, 10%);
+        color: $text_main;
+    }
+}
+
+
+//-------- Buttons --------
+
+// submit or confirm action buttons
+.submit-button{
+    padding: .75rem 1.5rem;
+    border: 1px solid $border-light;
+    border-radius: 0.25rem;
+    background-color: $btn-submit;
+    cursor: pointer;
+    border: 2px solid $border-accent;
+    &:hover{
+        background-color: darken($btn-submit, 5%);
+        border-color: $border-light;
+    }
+    &:active{
+        background-color: darken($btn-submit, 10%);
+    }
+}

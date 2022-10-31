@@ -1,0 +1,30 @@
+.navbar{
+
+    display: grid;
+    grid-template-columns: .1fr .85fr .1fr;
+    align-items: center;
+
+    .nav-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        gap:1em;
+
+        .nav-link{
+            text-decoration: none;
+            font-size: $nav-link-font-size;
+            color: $nav-link-color;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+.nav-logo{
+    max-height: 3em;
+}
+

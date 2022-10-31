@@ -1,0 +1,20 @@
+//- navbar
+
+nav.navbar
+    a.navbar-brand(href="/")
+        img(class="nav-logo" src="/img/cookBook.svg", alt="logo")
+
+    ul.nav-list
+        li.nav-item.active
+        a.nav-link(href="/") Home
+        li.nav-item
+        a.nav-link(href="/about") About
+        li.nav-item
+        a.nav-link(href="/contact") Contact
+    //- put the current user avatar over here - if there is one - if not, put the login button
+    if (currentUser)
+      a.nav-link(href="/logout") Logout
+    else
+        a.nav-link(href="/login")
+            button.submit-button Login
+            

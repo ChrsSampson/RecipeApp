@@ -1,0 +1,24 @@
+
+.login-container{
+    border: 1px solid $border-light;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap:2em;
+    padding: 2em;
+    height:auto;
+    box-shadow: -2px 0 0.5em 0.5em $bg_main-dark;
+
+    img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.login-sub{
+    color: $text_main;
+    font-size: 1rem;
+    &:hover{
+        color: $border-accent;
+    }
+}

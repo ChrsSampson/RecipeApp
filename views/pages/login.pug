@@ -1,0 +1,19 @@
+extends ../layouts/main.pug 
+
+
+//- login page
+block content
+    section(class="container-centered")
+        div(class="login-container")
+            img(src="/img/cookBook.svg", alt="logo")
+            form(class="login-form" action=formAction, method=formMethod)
+                h3=title
+                div(class="input-group")
+                    label(for='email') Email
+                    input(type='email', name='email', id='email')
+                div(class="input-group")
+                    label(for='password') Password
+                    input(type='password', name='password', id='password')
+                button(type='submit' class="submit-button") Login
+                div
+                    a(class="login-sub" href='/register') Don't have an account?
