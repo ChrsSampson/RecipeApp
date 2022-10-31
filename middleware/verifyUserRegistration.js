@@ -5,14 +5,15 @@ module.exports = function (req,res, next) {
 
     // check if all the fields are filled out
     if (!firstName || !lastName || !email || !password) {
-        console.error('All fields are required');
+        req.flash('error', 'Please fill out all the fields');
         return res.redirect('/register');
     }
     // make sure the email is formated like an email
-    if (!email.includes('@') && !email.includes('.')) {
-        console.error('Invalid email');
+    else if (!email.includes('@') && !email.includes('.')) {
+        req.flash('error', 'Please enter a valid email');
         return res.redirect('/register');
     }
-
-    next()
+    else {
+        next()
+    }
 }

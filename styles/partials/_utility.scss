@@ -18,6 +18,26 @@
     place-items: center;
 }
 
+// message container
+.flash-container{
+    position: absolute;
+    bottom: 5;
+    right: 5;
+    z-index: 100;
+
+    .info{
+        background-color: $info;
+    }
+
+    .success{
+        background-color: $success;
+    }
+
+    .error{
+        background-color: $error;
+    }
+}
+
 // input wrapper form a label and input
 .input-group{
     display: flex;

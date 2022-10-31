@@ -13,34 +13,50 @@
   place-items: center; }
 
 /* line 22, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+.flash-container {
+  position: absolute;
+  bottom: 5;
+  right: 5;
+  z-index: 100; }
+  /* line 28, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  .flash-container .info {
+    background-color: #d1c700; }
+  /* line 32, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  .flash-container .success {
+    background-color: #03faab; }
+  /* line 36, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  .flash-container .error {
+    background-color: #ff0000; }
+
+/* line 42, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
 .input-group, input[type="text"], input[type="password"], input[type="email"] {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem; }
-  /* line 26, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  /* line 46, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
   .input-group label, input[type="text"] label, input[type="password"] label, input[type="email"] label {
     margin-bottom: 0.5rem; }
-  /* line 29, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  /* line 49, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
   .input-group input, input[type="text"] input, input[type="password"] input, input[type="email"] input {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 0.25rem; }
 
-/* line 39, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+/* line 59, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
 input[type="text"], input[type="password"], input[type="email"] {
   border: 3px solid white input[type="text"], input[type="password"], input[type="email"]; }
-  /* line 42, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  /* line 62, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
   input[type="text"] :active, input[type="text"]:focus, input[type="password"] :active, input[type="password"]:focus, input[type="email"] :active, input[type="email"]:focus {
     border: 3px solid #03faab;
     background-color: #8a8a8a;
     color: #ffffff; }
-  /* line 47, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  /* line 67, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
   input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover {
     border: 3px solid #03faab;
     background-color: #8a8a8a;
     color: #ffffff; }
 
-/* line 58, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+/* line 78, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
 .submit-button {
   padding: .75rem 1.5rem;
   border: 1px solid #ccc;
@@ -48,11 +64,11 @@ input[type="text"], input[type="password"], input[type="email"] {
   background-color: #03faab;
   cursor: pointer;
   border: 2px solid #03faab; }
-  /* line 65, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  /* line 85, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
   .submit-button:hover {
     background-color: #03e19a;
     border-color: #ccc; }
-  /* line 69, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  /* line 89, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
   .submit-button:active {
     background-color: #02c889; }
 
