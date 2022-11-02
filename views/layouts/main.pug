@@ -11,10 +11,8 @@ head
     block head 
 
 body
-    if(flash)
-        div(class='flash-container')
-            div(class=flash.type || 'info')
-            h5=flash.message
+    
+    block flash
 
     block content
     footer

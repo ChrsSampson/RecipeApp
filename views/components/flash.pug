@@ -1,0 +1,17 @@
+//- flash component
+
+
+
+- count = 0
+
+if flash
+    each status in flash
+        - count++
+        if status.length
+            article(class="flash-container")
+                //- colored strip
+                div(class="flash-strip flash-strip-" + Object.keys(flash)[count])
+                //- flash message
+                p(class="flash-message")=status
+            script(src="/javascript/flash.js")
+

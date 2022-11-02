@@ -1,0 +1,39 @@
+// flash notitfications
+
+.flash-container{
+    background-color: grey;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 3em;
+    font-size: small;
+    display:flex;
+    align-items: center;
+    border-radius: .25em;
+    box-shadow: 0 0 1em 0.5em rgba(0,0,0,0.5);
+
+    margin: 0 3em 3em 0;
+}
+
+.flash-strip{
+    height:100%;
+    width: 5em;
+    border-radius: .25em 0 0 .25em;
+}
+
+.flash-message{
+    padding: 0 2em;
+    color: white;
+}
+
+.flash-strip-error{
+    background-color: $error;
+}
+
+.flash-strip-info{
+    background-color: $info;
+}
+
+.flash-strip-success{
+    background-color: $success;
+}

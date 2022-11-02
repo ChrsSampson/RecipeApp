@@ -1,11 +1,14 @@
 extends ../layouts/main.pug 
 
+block flash
+    include ../components/flash.pug
+
 //- register form
 block content
     section(class="container-centered")
         div(class="login-container")
             img(src="/img/cookBook.svg", alt="logo")
-            form(class="login-form" action=formAction, method=formMethod)
+            form(class="login-form" action=form.formAction, method=form.formMethod)
                 h3=title
                 div(class="input-group")
                     label(for='firstName') First Name

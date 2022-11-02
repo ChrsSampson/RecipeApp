@@ -4,16 +4,14 @@ const router = express.Router();
 
 // index page
 router.get('/', (req, res) => {
-    res.locals = {
-        title: 'Home'
-    }
+    res.locals.title = 'Home';
     res.render('pages/index.pug')
 });
 
 // login page
 router.get('/login', (req, res) => {
-    res.locals = {
-        title: 'Login',
+    res.locals.title = 'Login';
+    res.locals.form = {
         formMethod: 'POST',
         formAction: '/users/login',
     }
@@ -21,8 +19,8 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/register', (req, res) => {
-    res.locals = {
-        title: 'Register',
+    res.locals.title = 'Register';
+    res.locals.form = {
         formMethod: 'POST',
         formAction: '/users/register',
     }

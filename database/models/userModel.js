@@ -20,7 +20,8 @@ const userSchema = new Schema({
     },
     family: {
         type: String,
-        required: false
+        required: false,
+        default: null
     },
     password: {
         type: String,

@@ -18,7 +18,8 @@ const recipeSchema = new Schema({
     },
     owner: {
         type: String,
-        required: true
+        required: true,
+        default: "Anonymous"
     },
     creator: {
         type: String,
@@ -26,7 +27,8 @@ const recipeSchema = new Schema({
     },
     family: {
         type: String,
-        required: false
+        required: false,
+        default: "Unknown   "
     },
     date: {
         type: Date,

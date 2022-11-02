@@ -72,6 +72,43 @@ input[type="text"], input[type="password"], input[type="email"] {
   .submit-button:active {
     background-color: #02c889; }
 
+/* line 3, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_flash.scss */
+.flash-container {
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 3em;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  border-radius: .25em;
+  box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.5);
+  margin: 0 3em 3em 0; }
+
+/* line 18, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_flash.scss */
+.flash-strip {
+  height: 100%;
+  width: 5em;
+  border-radius: .25em 0 0 .25em; }
+
+/* line 24, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_flash.scss */
+.flash-message {
+  padding: 0 2em;
+  color: white; }
+
+/* line 29, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_flash.scss */
+.flash-strip-error {
+  background-color: #ff0000; }
+
+/* line 33, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_flash.scss */
+.flash-strip-info {
+  background-color: #d1c700; }
+
+/* line 37, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_flash.scss */
+.flash-strip-success {
+  background-color: #03faab; }
+
 /* line 3, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_home.scss */
 body {
   background-color: #606060;

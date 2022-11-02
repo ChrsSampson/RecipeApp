@@ -2,7 +2,9 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const session = require('express-session');
-const flash = require('flash');
+const flash = require('connect-flash');
+var cookieParser = require('cookie-parser');
+const { rmSync } = require('fs');
 
 // configure the app
 app.set('view engine', 'pug');
@@ -10,30 +12,30 @@ app.engine('pug', require('pug').__express);
 app.set('views', path.join(__dirname, 'views'));
 // pubic folder
 app.use(express.static(path.join(__dirname, 'public')));
+// parsing middleware
+app.use(express.urlencoded({ extended: true })); 
+app.use(cookieParser('keyboard cat'))
 
 // sessions
 app.use(session({
     secret: 'keyboard cat',
+    cookie: { maxAge: 60000 },
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true }
+    // cookie: { secure: true }
 }));
-
-// parsing middleware
-app.use(express.urlencoded({ extended: true })); 
 
 // flash messages
 app.use(flash());
-// Make these pieces of data availible on every request (if they exist)
+
 app.use((req, res, next) => {
-    // Currently logged in user
-    res.locals.currentUser = req.user;
-    // Flash messages
-    res.locals.info = req.flash('info');
-    res.locals.success = req.flash('success');
-    res.locals.error = req.flash('error');
-    next()
-  })
+    res.locals.flash = {
+        success: req.flash('success'),
+        error: req.flash('error'),
+        info: req.flash('info')
+    }
+    next();
+})
 
 // connection to db
 require('./database/connection');
