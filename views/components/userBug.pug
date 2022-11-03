@@ -1,0 +1,18 @@
+// user bug with logout button
+
+article(class="user-bug")
+    div(class="user-bug-avatar" style="background-color:" + user.color ) #{user.firstName[0].toUpperCase()}#{user.lastName[0].toUpperCase()}
+
+    div(class="user-bug-info")
+        if user.family
+            sub #{user.family} family
+        span(class="user-bug-name") #{user.firstName} #{user.lastName}
+    
+    div(class="user-bug-btn-container hidden")
+        form(action="/users/logout" method="POST")
+            button(class="submit-button" type="submit" id="logout-btn") Logout
+        button(class="button" id="user-bug-button") Settings
+
+
+    script(src='/javascript/userBug.js')
+    

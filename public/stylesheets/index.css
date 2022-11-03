@@ -57,24 +57,35 @@ input[type="text"], input[type="password"], input[type="email"] {
     color: #ffffff; }
 
 /* line 78, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
-.submit-button {
+.button, .submit-button {
+  background-color: #038ffa;
   padding: .75rem 1.5rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
+  cursor: pointer; }
+  /* line 84, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  .button:hover, .submit-button:hover {
+    background-color: #0381e1;
+    border-color: #ccc; }
+
+/* line 91, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+.submit-button {
   background-color: #03faab;
-  cursor: pointer;
   border: 2px solid #03faab; }
-  /* line 85, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  /* line 95, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
   .submit-button:hover {
     background-color: #03e19a;
     border-color: #ccc; }
-  /* line 89, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+  /* line 99, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
   .submit-button:active {
     background-color: #02c889; }
 
+/* line 107, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_utility.scss */
+.hidden {
+  display: none !important; }
+
 /* line 3, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_flash.scss */
 .flash-container {
-  background-color: grey;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -83,7 +94,8 @@ input[type="text"], input[type="password"], input[type="email"] {
   display: flex;
   align-items: center;
   border-radius: .25em;
-  box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.5);
+  background: #606060;
+  box-shadow: 20px 20px 60px #404040;
   margin: 0 3em 3em 0; }
 
 /* line 18, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_flash.scss */
@@ -163,5 +175,33 @@ body {
 /* line 27, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_nav.scss */
 .nav-logo {
   max-height: 3em; }
+
+/* line 1, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_userBug.scss */
+.user-bug {
+  display: flex;
+  padding: 0 1em;
+  align-items: center;
+  border-radius: .25em;
+  font-size: 1.2rem;
+  background-color: #505050; }
+  /* line 9, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_userBug.scss */
+  .user-bug .user-bug-avatar {
+    display: grid;
+    place-items: center;
+    width: 3.25em;
+    height: 2em;
+    border-radius: 50%;
+    margin-right: 1em; }
+  /* line 18, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_userBug.scss */
+  .user-bug .user-bug-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%; }
+  /* line 26, ../../../../../Users/digitelladmin/Documents/code/Recipe App/styles/partials/_userBug.scss */
+  .user-bug .user-bug-btn-container {
+    display: flex;
+    align-items: center; }
 
 /*# sourceMappingURL=index.css.map */

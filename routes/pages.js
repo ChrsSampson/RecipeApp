@@ -1,4 +1,4 @@
-// this file contains all the routes for the pages
+// this file contains all the routes for the pages that do note require authentication
 const express = require('express');
 const router = express.Router();
 

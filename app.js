@@ -4,7 +4,8 @@ const app = express();
 const session = require('express-session');
 const flash = require('connect-flash');
 var cookieParser = require('cookie-parser');
-const { rmSync } = require('fs');
+const userSessionParser = require('./middleware/userSessionParser');
+const isAuthed = require('./middleware/isAuthed'); 
 
 // configure the app
 app.set('view engine', 'pug');
@@ -44,7 +45,7 @@ require('./database/connection');
 // routes
 app.use('/', require('./routes/pages'));
 app.use('/users', require('./routes/users'));
-
+app.use('/app', isAuthed, userSessionParser, require('./routes/app'));
 
 // error handler
 app.use((err, req, res, next) => {

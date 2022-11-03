@@ -74,13 +74,23 @@ input[type="text"], input[type="password"], input[type="email"]{
 
 //-------- Buttons --------
 
-// submit or confirm action buttons
-.submit-button{
+
+.button{
+    background-color: $btn-primary;
     padding: .75rem 1.5rem;
     border: 1px solid $border-light;
     border-radius: 0.25rem;
-    background-color: $btn-submit;
     cursor: pointer;
+    &:hover{
+        background-color: darken($btn-primary, 5%);
+        border-color: $border-light;
+    }
+}
+
+// submit or confirm action buttons
+.submit-button{
+    @extend .button;
+    background-color: $btn-submit;
     border: 2px solid $border-accent;
     &:hover{
         background-color: darken($btn-submit, 5%);
@@ -89,4 +99,11 @@ input[type="text"], input[type="password"], input[type="email"]{
     &:active{
         background-color: darken($btn-submit, 10%);
     }
+}
+
+// --------------utility classes----------------
+
+// hide things from view
+.hidden{
+    display: none !important;
 }

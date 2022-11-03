@@ -23,6 +23,11 @@ const userSchema = new Schema({
         required: false,
         default: null
     },
+    color: {
+        type: String,
+        required: true,
+        default: '#' + Math.floor(Math.random()*16777215).toString(16)
+    },
     password: {
         type: String,
         required: true
@@ -33,7 +38,7 @@ const userSchema = new Schema({
     }
 });
 
-// hash the password before saving the user
+// hash the password before saving the user and generate a random color
 userSchema.pre('save', function(next) {
     const user = this;
     const SALT_FACTOR = 10;

@@ -28,7 +28,7 @@ const recipeSchema = new Schema({
     family: {
         type: String,
         required: false,
-        default: "Unknown   "
+        default: "Unknown"
     },
     date: {
         type: Date,

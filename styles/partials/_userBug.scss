@@ -1,0 +1,31 @@
+.user-bug{
+    display: flex;
+    padding: 0 1em;
+    align-items: center;
+    border-radius: .25em;
+    font-size: 1.2rem;
+    background-color: $bg_main_dark;
+
+    .user-bug-avatar{
+        display: grid;
+        place-items: center;
+        width: 3.25em;
+        height: 2em;
+        border-radius: 50%;
+        margin-right: 1em;
+    }
+
+    .user-bug-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .user-bug-btn-container{
+        display: flex;
+        align-items: center;
+    }
+}
+
